@@ -6,3 +6,6 @@ src/lib/
 dist/
 coverage/
 .idea/
+js/*.*
+img/*.*
+css/*.*
