@@ -17,6 +17,7 @@ gulp.task('compress-img',function (){
     svgoPlugins: [{removeViewBox: false}],
     use: [pngquant()]
     }))
+  .pipe($.rename({suffix: '.min'}))
   .pipe(gulp.dest('./dist/img/'));
 });
 
@@ -27,6 +28,7 @@ gulp.task('compress-img',function (){
 gulp.task('compress-css',function (){
   gulp.src('./css/**/*.css')
   .pipe($.minifyCss( {processImport: false}))
+  .pipe($.rename({suffix: '.min'}))
   .pipe(gulp.dest('./dist/css/'));
 });
 
@@ -37,6 +39,7 @@ gulp.task('compress-css',function (){
 gulp.task('compress-js',function (){
   gulp.src('./js/**/*.js')
   .pipe($.uglify({mangle: false }))
+  .pipe($.rename({suffix: '.min'}))
   .pipe(gulp.dest('./dist/js/'));
 });
 
