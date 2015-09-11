@@ -1,13 +1,13 @@
 {
-  "name": "minificationsoft",
+  "name": "resourceOptimization",
   "version": "1.0.0",
-  "description": "proyect helps to optimization for assets in soft",
-  "main": "index.js",
+  "description": "proyect helps to optimization for web assets(img,png,js)",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jesus Perales",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-imagemin": "^2.3.0",
