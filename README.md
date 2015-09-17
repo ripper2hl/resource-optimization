@@ -1,11 +1,11 @@
-# resourceOptimization
+# resourceOptimization [![devDependency Status](https://david-dm.org/ripper2hl/resourceOptimization/dev-status.svg)](https://david-dm.org/ripper2hl/resourceOptimization#info=devDependencies)
 
 Proyecto utilitario para optimizar recursos web(css,javascript e imagenes)
 mediante gulp.js, sin tener que agregar gulp a la estructura de su proyecto.
 
 # ¿Por qué?
 
-Muchas veces nos encontramos en proyectos ajenos a las nuevas tendencias de workflow automatizado por gulp o grunt pero requerimos optimizar los recursos de nuestro proyecto sin tener que modificar su estructura actual ya que es casi imposible adaptarlos, es un trabajo manual y rudimentario pero ocurre en la industria.
+Muchas veces nos encontramos en proyectos ajenos a las nuevas tendencias de workflow automatizado por gulp o grunt pero requerimos optimizar los recursos de nuestro proyecto sin tener que modificar su estructura actual ya que es casi imposible adaptarlos, es un trabajo manual y rudimentario pero ocurre.
 
 # Requerimientos
 
@@ -20,31 +20,48 @@ Muchas veces nos encontramos en proyectos ajenos a las nuevas tendencias de work
 
 # Uso
 
-* Optimizacion de css
+
+* Optimización de css
 
  Agregue todos sus archivos css, en una carpeta
- llamada css(esto en la raiz de resourceOptimization)
+ llamada css(en la raiz de resourceOptimization)
 
  ejecute la tarea de gulp compress-css
 
  `gulp compress-css`
 
 
- * Optimizacion de javascript
+
+* Optimización de javascript
 
   Agregue todos sus archivos javascript, en una carpeta
-  llamada js(esto en la raiz de resourceOptimization)
+  llamada js(en la raiz de resourceOptimization)
 
   ejecute la tarea de gulp compress-js
 
   `gulp compress-js`
 
 
-  * Optimizacion de imagenes
+
+* Optimización de imagenes
 
    Agregue todos sus archivos de imagenes, en una carpeta
-   llamada img(esto en la raiz de resourceOptimization)
+   llamada img(en la raiz de resourceOptimization)
 
    ejecute la tarea de gulp compress-img
 
    `gulp compress-img`
+
+
+* Optimización en general
+
+  Agregue todos sus archivos a las carpetas correspondientes
+  (img,css,js) y después ejecute gulp en su consola,se ejecutaran todas las tareas de optimización.
+
+  `gulp`
+
+
+
+ # NOTA
+
+Aunque la minificación de los recursos web mejora notablemente el consumo de ancho de banda en algunas aplicaciones también es recomendable activar gziped en nuestro servidor (https://css-tricks.com/the-difference-between-minification-and-gzipping/) .

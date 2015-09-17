@@ -9,9 +9,8 @@ var $ = require('gulp-load-plugins')();
  * dejandolos en la ruta dist/img
  * @author Jesus Perales.
 **/
-//TODO Verificar el tipo de imagen (png,jpg,gif,etc) y aplicar el plugin correspondiente
 gulp.task('compress-img',function (){
-  gulp.src('./img/**/*.*')
+  gulp.src('./img/**/*.{png,gif,jpg,jpeg,svg}')
   .pipe($.imagemin({
     progressive: true,
     svgoPlugins: [{removeViewBox: false}],

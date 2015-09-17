@@ -1,7 +1,7 @@
 {
   "name": "resourceOptimization",
   "version": "1.0.0",
-  "description": "proyect helps to optimization for web assets(img,png,js)",
+  "description": "proyect helps to optimization for web assets(img,css,js)",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
