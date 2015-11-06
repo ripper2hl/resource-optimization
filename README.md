@@ -1,4 +1,4 @@
-# resourceOptimization [![devDependency Status](https://david-dm.org/ripper2hl/resourceOptimization/dev-status.svg)](https://david-dm.org/ripper2hl/resourceOptimization#info=devDependencies)
+# resource-optimization [![devDependency Status](https://david-dm.org/ripper2hl/resource-optimization/dev-status.svg)](https://david-dm.org/ripper2hl/resourceOptimization#info=devDependencies)
 
 Proyecto utilitario para optimizar recursos web(css,javascript e imagenes)
 mediante gulp.js, sin tener que agregar gulp a la estructura de su proyecto.
@@ -9,8 +9,8 @@ Muchas veces nos encontramos en proyectos ajenos a las nuevas tendencias de work
 
 # Requerimientos
 
-* Node.js /IO.js
-* Gulp
+* [Node.js /IO.js](http://www.ingenieroperales.com/2015/05/23/instalar-io-js-en-gnu/)
+* [Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
 
 # Instalación
 
