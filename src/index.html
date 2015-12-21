@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" />
+<html lang="es" ng-app="resourceOptimization" />
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,20 +16,26 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/ng-droplet/dist/ng-droplet.min.js"></script>
     <!-- endbower -->
 
     <!-- inject:css -->
     <!-- endinject -->
 
     <!-- inject:js -->
+    <script src="app.js"></script>
+    <script src="directives/drop/drop.js"></script>
+    <script src="services/compressResolver.js"></script>
+    <script src="services/compressJavascript.js"></script>
+    <script src="services/compressImage.js"></script>
+    <script src="services/compressCss.js"></script>
+    <script src="services/compress.js"></script>
     <!-- endinject -->
 
   </head>
   <body>
     <div class="container-fluid">
-      <div class="jumbotron">
-        <input type="file" name="name" value="" />
-      </div>
+      <drop></drop>
     </div>
   </body>
 </html>

@@ -24,6 +24,7 @@
   ],
   "dependencies": {
     "angular": "~1.4.8",
-    "bootstrap": "v4.0.0-alpha.2"
+    "bootstrap": "v4.0.0-alpha.2",
+    "ng-droplet": "~0.5.9"
   }
 }

@@ -4,14 +4,23 @@
 var gulp = require('gulp');
 var inject = require('gulp-inject');
 var wiredep = require('wiredep').stream;
+var angularFilesort = require('gulp-angular-filesort');
+var pngquant = require('imagemin-pngquant');
+var $ = require('gulp-load-plugins')();
+
 
 gulp.task('inject-me', function () {
-  var target = gulp.src('./src/index.html');
 
-  var sources = gulp.src(['./src/**/*.js', './src/**/*.css', '!./src/bower_components/**/*'], {read: false});
 
-  return target.pipe(inject(sources))
-    .pipe(gulp.dest('./src'));
+  gulp.src('./src/index.html')
+  .pipe(inject(
+    gulp.src(['./src/**/*.js', './src/**/*.css', '!./src/bower_components/**/*'])
+    .pipe(angularFilesort()), {
+    read: false,
+    ignorePath: '/src/',
+    relative:true
+  }))
+  .pipe(gulp.dest('./src'));
 });
 
 gulp.task('inject-vendor', function() {
