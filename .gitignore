@@ -6,3 +6,4 @@ src/lib/
 dist/
 coverage/
 .idea/
+src/bower_components

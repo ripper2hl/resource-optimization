@@ -1,0 +1,29 @@
+{
+  "name": "resourceOptimization",
+  "description": "proyect helps to optimization for web assets(img,css,js)",
+  "main": "gulpfile.js",
+  "authors": [
+    "Jesus Perales"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "minify"
+  ],
+  "homepage": "https://github.com/ripper2hl/resource-optimization",
+  "moduleType": [
+    "node"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "bootstrap": "v4.0.0-alpha.2"
+  }
+}

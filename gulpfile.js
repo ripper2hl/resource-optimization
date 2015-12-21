@@ -1,45 +1,25 @@
-// File: Gulpfile.js
+// File: gulpfile.js
 'use strict';
+
 var gulp = require('gulp');
-var pngquant = require('imagemin-pngquant');
-var $ = require('gulp-load-plugins')();
+var inject = require('gulp-inject');
+var wiredep = require('wiredep').stream;
 
-/**
- * Optimiza imagenes para ahorrar ancho de banda
- * dejandolos en la ruta dist/img
- * @author Jesus Perales.
-**/
-gulp.task('compress-img',function (){
-  gulp.src('./img/**/*.{png,gif,jpg,jpeg,svg}')
-  .pipe($.imagemin({
-    progressive: true,
-    svgoPlugins: [{removeViewBox: false}],
-    use: [pngquant()]
-    }))
-  .pipe($.rename({suffix: '.min'}))
-  .pipe(gulp.dest('./dist/img/'));
+gulp.task('inject-me', function () {
+  var target = gulp.src('./src/index.html');
+
+  var sources = gulp.src(['./src/**/*.js', './src/**/*.css', '!./src/bower_components/**/*'], {read: false});
+
+  return target.pipe(inject(sources))
+    .pipe(gulp.dest('./src'));
 });
 
-/**
- * Minifica los archivos css creandolos en la ruta dist/css
- * @author Jesus Perales.
-**/
-gulp.task('compress-css',function (){
-  gulp.src('./css/**/*.css')
-  .pipe($.minifyCss( {processImport: false}))
-  .pipe($.rename({suffix: '.min'}))
-  .pipe(gulp.dest('./dist/css/'));
+gulp.task('inject-vendor', function() {
+  gulp.src('./src/index.html')
+  .pipe(wiredep({
+    directory: './src/bower_components/'
+  }))
+  .pipe(gulp.dest('./src/'));
 });
 
-/**
- * Minifica los archivos js dejandolos en la ruta dist/js
- * @author Jesus Perales.
- **/
-gulp.task('compress-js',function (){
-  gulp.src('./js/**/*.js')
-  .pipe($.uglify({mangle: false }))
-  .pipe($.rename({suffix: '.min'}))
-  .pipe(gulp.dest('./dist/js/'));
-});
-
-gulp.task('default', ['compress-img','compress-css','compress-js']);
+gulp.task('inject',['inject-vendor','inject-me']);

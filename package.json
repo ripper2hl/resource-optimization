@@ -2,19 +2,22 @@
   "name": "resourceOptimization",
   "version": "1.0.0",
   "description": "proyect helps to optimization for web assets(img,css,js)",
-  "main": "gulpfile.js",
+  "main": "./electron.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jesus Perales",
   "license": "MIT",
   "devDependencies": {
+    "electron-prebuilt": "^0.36.1",
     "gulp": "^3.9.0",
     "gulp-imagemin": "^2.3.0",
+    "gulp-inject": "^3.0.0",
     "gulp-load-plugins": "^1.1.0",
     "gulp-minify-css": "^1.2.1",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.4.1",
-    "imagemin-pngquant": "^4.2.0"
+    "imagemin-pngquant": "^4.2.0",
+    "wiredep": "^3.0.0"
   }
 }
