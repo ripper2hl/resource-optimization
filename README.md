@@ -26,9 +26,9 @@ Muchas veces nos encontramos en proyectos ajenos a las nuevas tendencias de work
  Agregue todos sus archivos css, en una carpeta
  llamada css(en la raiz de resourceOptimization)
 
- ejecute la tarea de gulp compress-css
+ ejecute la tarea de gulp css
 
- `gulp compress-css`
+ `gulp css`
 
 
 
@@ -37,9 +37,9 @@ Muchas veces nos encontramos en proyectos ajenos a las nuevas tendencias de work
   Agregue todos sus archivos javascript, en una carpeta
   llamada js(en la raiz de resourceOptimization)
 
-  ejecute la tarea de gulp compress-js
+  ejecute la tarea de gulp js
 
-  `gulp compress-js`
+  `gulp js`
 
 
 
@@ -48,9 +48,9 @@ Muchas veces nos encontramos en proyectos ajenos a las nuevas tendencias de work
    Agregue todos sus archivos de imagenes, en una carpeta
    llamada img(en la raiz de resourceOptimization)
 
-   ejecute la tarea de gulp compress-img
+   ejecute la tarea de gulp img
 
-   `gulp compress-img`
+   `gulp img`
 
 
 * Optimización en general
