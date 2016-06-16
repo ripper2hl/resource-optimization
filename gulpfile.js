@@ -9,7 +9,7 @@ var $ = require('gulp-load-plugins')();
  * dejandolos en la ruta dist/img
  * @author Jesus Perales.
 **/
-gulp.task('compress-img',function (){
+gulp.task('img',function (){
   gulp.src('./img/**/*.{png,gif,jpg,jpeg,svg}')
   .pipe($.imagemin({
     progressive: true,
@@ -23,7 +23,7 @@ gulp.task('compress-img',function (){
  * Minifica los archivos css creandolos en la ruta dist/css
  * @author Jesus Perales.
 **/
-gulp.task('compress-css',function (){
+gulp.task('css',function (){
   gulp.src('./css/**/*.css')
   .pipe($.minifyCss( {processImport: false}))
   .pipe($.rename({suffix: '.min'}))
@@ -34,11 +34,11 @@ gulp.task('compress-css',function (){
  * Minifica los archivos js dejandolos en la ruta dist/js
  * @author Jesus Perales.
  **/
-gulp.task('compress-js',function (){
+gulp.task('js',function (){
   gulp.src('./js/**/*.js')
   .pipe($.uglify({mangle: false }))
   .pipe($.rename({suffix: '.min'}))
   .pipe(gulp.dest('./dist/js/'));
 });
 
-gulp.task('default', ['compress-img','compress-css','compress-js']);
+gulp.task('default', ['img','css','js']);
