@@ -16,7 +16,6 @@ gulp.task('compress-img',function (){
     svgoPlugins: [{removeViewBox: false}],
     use: [pngquant()]
     }))
-  .pipe($.rename({suffix: '.min'}))
   .pipe(gulp.dest('./dist/img/'));
 });
 
