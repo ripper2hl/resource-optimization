@@ -26,7 +26,6 @@ gulp.task('img',function (){
 gulp.task('css',function (){
   gulp.src('./css/**/*.css')
   .pipe($.minifyCss( {processImport: false}))
-  .pipe($.rename({suffix: '.min'}))
   .pipe(gulp.dest('./dist/css/'));
 });
 
@@ -37,7 +36,6 @@ gulp.task('css',function (){
 gulp.task('js',function (){
   gulp.src('./js/**/*.js')
   .pipe($.uglify({mangle: false }))
-  .pipe($.rename({suffix: '.min'}))
   .pipe(gulp.dest('./dist/js/'));
 });
 
